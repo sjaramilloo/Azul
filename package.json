@@ -1,0 +1,30 @@
+{
+  "name": "azul",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "prueba",
+    "build": "node getdata.js && grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjaramilloo/Azul.git"
+  },
+  "author": "SebastianJ,JSK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjaramilloo/Azul/issues"
+  },
+  "homepage": "https://github.com/sjaramilloo/Azul#readme",
+  "devDependencies": {
+    "grunt": "^1.5.2",
+    "node-fetch": "^3.2.4"
+  },
+  "dependencies": {
+    "firebase": "^9.8.0",
+    "grunt-compile-handlebars": "^2.0.2",
+    "handlebars": "^4.7.7"
+  }
+}
