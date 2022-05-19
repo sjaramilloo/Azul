@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class='container'>
+        <div class="row">
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/img/persona1.jpg" alt="persona profesional"></div>
+                        <p class="card-title">Lorem ipsum dolor sit</p>
+                        <a class="btn-floating waves-effect waves-light red halfway-fab activator">
+                            <i class="material-icons">add</i>
+                        </a>
+                    <div class="card-content">
+                        <p class="card-title">Lorem ipsum dolor sit</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="">Agenda tu cita</a>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title">
+                        Lorem ipsum dolor sit
+                        <i class="material-icons right">close</i>
+                    </span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente. Exercitationem corrupti ab assumenda? orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      var instance = M.Carousel.getInstance(elem);
+      </script>
+  
+      <script>
+        var options={
+          numVisible: 3,
+          fullwidth: true,
+          indicators:true,
+          fullwidth:true
+        };
+        document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.carousel');
+      var instances = M.Carousel.init(elems, options);
+    });
+        // M.AutoInit();
+      </script>
+</body>
+</html>
