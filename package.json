@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "prueba",
-    "build": "node getdata.js && grunt"
+    "get_data": "node getdata.js",
+    "build": "node getdata.js && grunt build",
+    "dev": "grunt dev"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,11 @@
   "homepage": "https://github.com/sjaramilloo/Azul#readme",
   "devDependencies": {
     "grunt": "^1.5.2",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "node-fetch": "^3.2.4"
   },
   "dependencies": {
