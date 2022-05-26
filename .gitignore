@@ -1,2 +1,4 @@
 node_modules
 firebase_config.js
+dist
+.sass-cache
