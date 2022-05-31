@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="/src/css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
 </head>
+
 <body>
-  <nav class="nav-extended #b2ebf2 cyan lighten-4">
+  <nav class="nav-extended cyan darken-3">
     <div class="nav-wrapper">
-      <img href="#" class="brand-logo" "logo" img src="/img/logo.png"/>
+      <img href="#" class="brand-logo" img src="./images/logo.png" />
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="sass.html">Tienda</a></li>
+        <li><a href="badges.html">Nosotros</a></li>
+        <li><a href="collapsible.html">Agenda</a></li>
       </ul>
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1">Test 1</a></li>
-        <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+        <li class="tab"><a href="#test1"></a></li>
+        <li class="tab"><a class="active" href="#test2"></a></li>
         <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
         <li class="tab"><a href="#test4">Test 4</a></li>
       </ul>
@@ -34,103 +37,103 @@
     <li><a href="badges.html">Components</a></li>
     <li><a href="collapsible.html">JavaScript</a></li>
   </ul>
-  
+
   <div class="carousel carousel-slider">
-    <div class="carousel-item" ><img src="/img/con1.jpeg"></div>
-    <div class="carousel-item" ><img src="/img/con2.jpeg"></div>
-    <div class="carousel-item" ><img src="/img/con1.jpeg"></div>
-    <div class="carousel-item" ><img src="/img/con2.jpeg"></div>
+    <div class="carousel-item"><img src="./images/con1.jpeg"></div>
+    <div class="carousel-item"><img src="./images/con2.jpeg"></div>
+    <div class="carousel-item"><img src="./images/con1.jpeg"></div>
+    <div class="carousel-item"><img src="./images/con2.jpeg"></div>
   </div>
 
-      <section>Hero</section>
-      <section>profesionales
-        {{#each profesionales}}
-        <p>{{nombre}}</p>
-        <p>{{perfil}}</p>
-        <p>{{terapia}}</p>
-        <p>{{contacto}}</p>
-        {{/each}}
-      </section>
+  <div class='container'>
+    <div class="row">
+      {{#each profesionales}}
+      <div class="col s4 ">
+      <div class="card profesional__card">
+        <div class="card-image">
+          <img class="profesional__image"src="{{foto}}" alt="persona profesional">
+          <a class="btn-floating waves-effect waves-light red halfway-fab activator">
+            <i class="material-icons">add</i>
+          </a>
+        </div>
+        <p class="card-title"></p>
+        <div class="card-content">
+          <p class="card-title"></p>
 
-<div class='container'>
-  <div class="row">
-      <div class="col s4">
-          <div class="card">
-              <div class="card-image">
-                  <img src="/img/persona1.jpg" alt="persona profesional"></div>
-                  <p class="card-title">Lorem ipsum dolor sit</p>
-                  <a class="btn-floating waves-effect waves-light red halfway-fab activator">
-                      <i class="material-icons">+</i>
-                  </a>
-              <div class="card-content">
-                  <p class="card-title">Lorem ipsum dolor sit</p>
-                  {{#each profesionales}}
-        <p>{{nombre}}</p>
-        <p>{{perfil}}</p>
-        <p>{{terapia}}</p>
-        <p>{{contacto}}</p> 
-        {{/each}}
-              </div>
-              <div class="card-action">
-                  <a href="">Agenda tu cita</a>
-              </div>
-              <div class="card-reveal">
-                  <span class="card-title">
-                  Lorem ipsum dolor sit
-                  <i class="material-icons right">X</i>
-              </span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente. Exercitationem corrupti ab assumenda? orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.orem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae molestias ipsa sapiente.</p>
-              </div>
-          </div>
+          <p>{{nombre}}</p>
+          <p>{{perfil}}</p>
+          <p>{{terapia}}</p>
+          <p>{{contacto}}</p>
+
+        </div>
+        <div class="card-action">
+          <a href="">Agenda tu cita</a>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title">
+            Lorem ipsum dolor sit
+            <i class="material-icons right">close</i>
+          </span>
+          <p>{{descripcion}}.</p>
+        </div>
       </div>
-  </div>
-</div>
+    </div>
+      {{/each}}
 
-  <div>
-    <section class="container-fluid mb-3 mt-3"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.369909635181!2d-100.36005388466663!3d25.692173817744496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662960c5427407f%3A0x369ca09caae168bc!2sVenezuela%20345%2C%20Vista%20Hermosa%2C%2064620%20Monterrey%2C%20N.L.%2C%20M%C3%A9xico!5e0!3m2!1ses!2sco!4v1637807412464!5m2!1ses!2sco" width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe></section>
+    </div>
+  </div>
+
+  <div class="mapa">
+    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis consequuntur quae inventore eius unde
+      repudiandae ratione aspernatur libero ipsum commodi quis consectetur similique molestiae debitis iusto, impedit
+      enim neque illo esse. Voluptate totam quae ab minima, cumque sint modi ea!</p>
+    <section class="container-fluid mb-3 mt-3"><iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.369909635181!2d-100.36005388466663!3d25.692173817744496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662960c5427407f%3A0x369ca09caae168bc!2sVenezuela%20345%2C%20Vista%20Hermosa%2C%2064620%20Monterrey%2C%20N.L.%2C%20M%C3%A9xico!5e0!3m2!1ses!2sco!4v1637807412464!5m2!1ses!2sco"
+        width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe></section>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     var instance = M.Carousel.getInstance(elem);
-    </script>
+  </script>
 
-    <script>
-      var options={
-        numVisible: 3,
-        fullwidth: true,
-        indicators:true,
-        fullwidth:true
-      };
-      document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, options);
-  });
+  <script>
+    var options = {
+      numVisible: 3,
+      fullwidth: true,
+      indicators: true,
+      fullwidth: true
+    };
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.carousel');
+      var instances = M.Carousel.init(elems, options);
+    });
       // M.AutoInit();
-    </script>
-         <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2022 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
+  </script>
+  <footer class="page-footer cyan darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2022 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
