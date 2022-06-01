@@ -8,8 +8,12 @@ module.exports = function (grunt) {
             src: "./src/pages/index.html",
             dest: "./dist/index.html",
           },
+          {
+            src: "./src/pages/tienda.html",
+            dest: "./dist/tienda.html",
+          },
         ],
-        templateData: "./src/pages/profesionales.json",
+        templateData: "./src/pages/data.json",
       },
     },
     sass: {
