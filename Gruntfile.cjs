@@ -12,6 +12,10 @@ module.exports = function (grunt) {
             src: "./src/pages/tienda.html",
             dest: "./dist/tienda.html",
           },
+          {
+            src: "./src/pages/contactenos.html",
+            dest: "./dist/contactenos.html",
+          },
         ],
         templateData: "./src/pages/data.json",
       },

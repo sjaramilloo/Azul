@@ -17,29 +17,20 @@
       <img href="#" class="brand-logo" img src="./images/logo.png" />
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Tienda</a></li>
-        <li><a href="badges.html">Nosotros</a></li>
-        <li><a href="collapsible.html">Agenda</a></li>
+        <li><a href="./tienda.html">Tienda</a></li>
+        <li><a href="./contactenos.html">Contáctenos</a></li>
+        <li><a href="./contactenos.html">Agenda</a></li>
       </ul>
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
         <li class="tab"><a href="#test1"></a></li>
         <li class="tab"><a class="active" href="#test2"></a></li>
-        <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-        <li class="tab"><a href="#test4">Test 4</a></li>
+        <li class="tab disabled"><a href="#test3"></a></li>
+        <li class="tab"><a href="#test4"></a></li>
       </ul>
     </div>
   </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">JavaScript</a></li>
-  </ul>
-
-  
-
   <div class='container'>
     <div class="row">
       {{#each productos}}
@@ -55,8 +46,8 @@
         <div class="card-content">
           <p class="card-title"></p>
 
-          <p>{{tipop}}</p>
-          <p>{{valorl}}</p>
+          <p>{{tipop}}</p> 
+          <p>{{valor}}</p>
 
         </div>
         <div class="card-action">
@@ -104,6 +95,7 @@
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Links</h5>
+          
           <ul>
             <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
             <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
