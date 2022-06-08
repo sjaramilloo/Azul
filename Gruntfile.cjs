@@ -52,20 +52,31 @@ module.exports = function (grunt) {
       },
     watch: {
       options: {
-        livereload: true,
-        reload : true
+        livereload: true
       },
-      css: {
+      sass: {
         files: "src/**/*.scss",
         tasks: ["clean:css", "sass"],
+        options: {
+          livereload: false
+        }
       },
       handlebars: {
         files: "src/**/*.html",
         tasks: ["clean:html", "compile-handlebars"],
+        options: {
+          livereload: false
+        }
       },
       js: {
         files:"src/**/*.js",
-        tasks: ["clean:js", "copy:js"]
+        tasks: ["clean:js", "copy:js"],
+        options: {
+          livereload: false
+        }
+      },
+      dist: {
+        files: ["dist/**/*.js", "dist/**/*.css", "dist/**/*.html"]
       }
     },
     connect: {
