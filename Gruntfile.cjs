@@ -32,8 +32,9 @@ module.exports = function (grunt) {
     },
     clean: {
         all: ["dist"],
-        html: ["dist/**.html"],
-        css: ["dist/**.css"]
+        html: ["dist/**/*.html"],
+        css: ["dist/**/*.css"],
+        js: ["dist/**/*.js"]
     },
     copy: {
         files: {
@@ -52,6 +53,7 @@ module.exports = function (grunt) {
     watch: {
       options: {
         livereload: true,
+        reload : true
       },
       css: {
         files: "src/**/*.scss",
@@ -61,6 +63,10 @@ module.exports = function (grunt) {
         files: "src/**/*.html",
         tasks: ["clean:html", "compile-handlebars"],
       },
+      js: {
+        files:"src/**/*.js",
+        tasks: ["clean:js", "copy:js"]
+      }
     },
     connect: {
       server: {

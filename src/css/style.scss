@@ -22,11 +22,6 @@ main {
     height: 100px;
 }
 
-.mapa {
-    position: relative;
-    display:flex ;
-}
-
 .carousel{
     width: 100vw;
     height: 80vh;
@@ -41,18 +36,18 @@ main {
         margin: 5px ;
     }
 }
-.mar1{
-    margin:2%;
+
+
+.contactenos{
+    &__btn input{
+        color: #ffffff;
+    }
 }
-.fixleft{
-    position: fixed-end;
-    margin-left: 47%;
+
+.hidden{
+    display: none;
 }
-.pad1{
-    padding:50px;
-    margin-bottom: 50px;
-}
-.mar2{
-    padding:50px;
-    margin-top: 50px;
+
+.boder_cyan{
+    border-color: #00838f;
 }

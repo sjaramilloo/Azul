@@ -31,100 +31,91 @@
       </ul>
     </div>
   </nav>
-
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">JavaScript</a></li>
-  </ul>
-
   <div class="pad1 carousel carousel-slider">
     <div class="carousel-item"><img src="./images/con1.jpeg"></div>
     <div class="carousel-item"><img src="./images/con2.jpeg"></div>
-    <div class="carousel-item"><img src="./images/con1.jpeg"></div>
-    <div class="carousel-item"><img src="./images/con2.jpeg"></div>
+    <div class="carousel-item"><img src="./images/con3.jpeg"></div>
+    <div class="carousel-item"><img src="./images/con4.jpeg"></div>
+    <div class="carousel-item"><img src="./images/con5.jpeg"></div>
   </div>
-  <div>
-    <p class="mar1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit accusantium perspiciatis, voluptatum velit illum a repudiandae officia et! Eos quas minus incidunt soluta at aut quod molestias maiores, magni tempore!
-    Voluptate eaque culpa tenetur accusantium repudiandae. Obcaecati dicta voluptatem praesentium deleniti voluptatum rem pariatur dignissimos ducimus nesciunt quae! Dolore qui voluptate, reprehenderit ut veniam ea aliquam quasi quisquam soluta veritatis.</p>
-  </div>
-  <div class='container mar2'>
+  <div class="container">
+    <div class="row">
+      <blockquote class="boder_cyan">
+        Somos un coworking de bienestar con enfoque holístico, con espacios disponibles para atención
+        presencial de pacientes en áreas como psicología y terapias complementarias.
+        Contamos además con nuestra propia tienda de productos de calidad que complementen la atención terapéutica.
+      </blockquote>
+    </div>
     <div class="row">
       {{#each profesionales}}
       <div class="col s4 ">
-      <div class="card profesional__card">
-        <div class="card-image">
-          <img class="profesional__image"src="{{foto}}" alt="persona profesional">
-          <a class="btn-floating waves-effect waves-light red halfway-fab activator">
-            <i class="material-icons">add</i>
-          </a>
-        </div>
-        <p class="card-title"></p>
-        <div class="card-content">
+        <div class="card profesional__card">
+          <div class="card-image">
+            <img class="profesional__image" src="{{foto}}" alt="persona profesional">
+            <a class="btn-floating waves-effect waves-light red halfway-fab activator">
+              <i class="material-icons">add</i>
+            </a>
+          </div>
           <p class="card-title"></p>
+          <div class="card-content">
+            <p class="card-title"></p>
 
-          <p>{{nombre}}</p>
-          <p>{{perfil}}</p>
-          <p>{{terapia}}</p>
-          <p>{{contacto}}</p>
+            <p>{{nombre}}</p>
+            <p>{{perfil}}</p>
+            <p>{{terapia}}</p>
+            <p>{{contacto}}</p>
 
-        </div>
-        <div class="card-action">
-          <a href="">Agenda tu cita</a>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title">
-            Lorem ipsum dolor sit
-            <i class="material-icons right">close</i>
-          </span>
-          <p>{{descripcion}}.</p>
+          </div>
+          <div class="card-action">
+            <a href="">Agenda tu cita</a>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title">
+              Lorem ipsum dolor sit
+              <i class="material-icons right">close</i>
+            </span>
+            <p>{{descripcion}}.</p>
+          </div>
         </div>
       </div>
-    </div>
       {{/each}}
 
     </div>
+    <div class="row">
+      <div class="mapa">
+        <p class="col s12 m4">the quick brown fox jumps over the lazy dog</p>
+        <section class="col s12 m8">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.669775799665!2d-75.58687688573431!3d6.174945328831423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683623c5177cb%3A0x6e9cf8af8b32465b!2sAzul%20Casa%20Hol%C3%ADstica!5e0!3m2!1sen!2sco!4v1654372000287!5m2!1sen!2sco"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+        </section>
+      </div>
+    </div>
   </div>
-
-  <div class="mapa">
-    <p class="mar1">the quick brown fox jumps over the lazy dog</p>
-    <section class="container-fluid mb-3 mt-3 fixleft">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.669775799665!2d-75.58687688573431!3d6.174945328831423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683623c5177cb%3A0x6e9cf8af8b32465b!2sAzul%20Casa%20Hol%C3%ADstica!5e0!3m2!1sen!2sco!4v1654372000287!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe></section>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-  <script>
-    var options = {
-      numVisible: 3,
-      fullwidth: true,
-      indicators: true,
-      fullwidth: true
-    };
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.carousel');
-      var instances = M.Carousel.init(elems, options);
-    });
-      // M.AutoInit();
-  </script>
-
   <footer class="page-footer cyan darken-3">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Espacios armoniosos para atención presencial en pro del equilibrio integral del ser.</h5>
-          <a> <img src="https://img.icons8.com/clouds/50/undefined/whatsapp.png"/></a>
-          <a><img src="https://img.icons8.com/clouds/50/undefined/facebook-new.png"/></a>
-          <a><img src="https://img.icons8.com/clouds/50/undefined/instagram-new--v3.png"/></a>
+          <h5 class="white-text">Espacios armoniosos para atención presencial en pro del equilibrio integral del ser.
+          </h5>
+          <a href="https://api.whatsapp.com/send?phone=573148770506"> <img
+              src="https://img.icons8.com/clouds/50/undefined/whatsapp.png" /></a>
+          <a href="https://www.facebook.com/azulbienestar-111429571452347/"><img
+              src="https://img.icons8.com/clouds/50/undefined/facebook-new.png" /></a>
+          <a href="https://www.instagram.com/azul.bienestar/"><img
+              src="https://img.icons8.com/clouds/50/undefined/instagram-new--v3.png" /></a>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Información de interés</h5>
-          
+
           <div>
             <p><a class="grey-text text-lighten-3" href="#!">De 8 AM a 8 PM</p>
-            <p><a class="grey-text text-lighten-3" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.669775799665!2d-75.58687688573431!3d6.174945328831423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683623c5177cb%3A0x6e9cf8af8b32465b!2sAzul%20Casa%20Hol%C3%ADstica!5e0!3m2!1sen!2sco!4v1654372000287!5m2!1sen!2sco">Dg. 33 #32A Sur 34, Envigado, Antioquia</p>
+            <p><a class="grey-text text-lighten-3"
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.669775799665!2d-75.58687688573431!3d6.174945328831423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683623c5177cb%3A0x6e9cf8af8b32465b!2sAzul%20Casa%20Hol%C3%ADstica!5e0!3m2!1sen!2sco!4v1654372000287!5m2!1sen!2sco">Dg.
+                33 #32A Sur 34, Envigado, Antioquia</p>
             <p><a class="grey-text text-lighten-3" href="azul.casaholistica@gmail.com">azul.casaholistica@gmail.com</p>
-            
+
           </div>
         </div>
       </div>
@@ -135,6 +126,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/logica.js"></script>
 </body>
-
 </html>
