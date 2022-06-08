@@ -12,27 +12,21 @@
 </head>
 
 <body>
-  <nav class="nav-extended cyan darken-3">
+  <nav class="nav cyan darken-3">
     <div class="nav-wrapper">
-      <a href="./index.html"><img href="#" class="brand-logo" img src="./images/logo1.png" /></a>
+      <a href="#"><img href="#" class="brand-logo" img src="./images/logo1.png" /></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul id="nav-mobile" class="right hide-on-med-and-down align">
+        <li><a href="./index.html">Inicio</a></li>
         <li><a href="./tienda.html">Tienda</a></li>
         <li><a href="./contactenos.html">Contáctenos</a></li>
-        <li><a href="./contactenos.html">Agenda</a></li>
-      </ul>
-    </div>
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1"></a></li>
-        <li class="tab"><a class="active" href="#test2"></a></li>
-        <li class="tab disabled"><a href="#test3"></a></li>
-        <li class="tab"><a href="#test4"></a></li>
+        <!-- <li><a href="./contactenos.html">Agenda</a></li> -->
       </ul>
     </div>
   </nav>
   <div class='container'>
-    <div class="row">
+    <div class="row section">
+      <h4 class="cyan-text text-darken-2">Tienda</h4>
       {{#each productos}}
       <div class="col s4 ">
       <div class="card profesional__card">
@@ -46,7 +40,7 @@
         <div class="card-content">
           <p class="card-title"></p>
 
-          <p>{{tipop}}</p> 
+          <p>{{tipop}}</p>
           <p>{{valor}}</p>
 
         </div>
@@ -67,7 +61,7 @@
     </div>
   </div>
 
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
@@ -83,12 +77,12 @@
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Información de interés</h5>
-          
+
           <div>
             <p><a class="grey-text text-lighten-3" href="#!">De 8 AM a 8 PM</p>
             <p><a class="grey-text text-lighten-3" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.669775799665!2d-75.58687688573431!3d6.174945328831423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683623c5177cb%3A0x6e9cf8af8b32465b!2sAzul%20Casa%20Hol%C3%ADstica!5e0!3m2!1sen!2sco!4v1654372000287!5m2!1sen!2sco">Dg. 33 #32A Sur 34, Envigado, Antioquia</p>
             <p><a class="grey-text text-lighten-3" href="azul.casaholistica@gmail.com">azul.casaholistica@gmail.com</p>
-            
+
           </div>
         </div>
       </div>
