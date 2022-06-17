@@ -42,16 +42,23 @@ function loadHomeCarousel() {
     var elems = document.querySelectorAll(".carousel");
     var instances = M.Carousel.init(elems, options);
   });
+  window.addEventListener("resize", function () {
+    console.log("aja");
+    var elems = document.querySelectorAll(".carousel");
+    var instances = M.Carousel.init(elems, options);
+  });
 }
 
-function initFormListener() {
-  var form = document.getElementById("form_contactenos");
+function initFormListener(form) {
   form.addEventListener("submit", (event) => {
     handleSubmit(event,form)
   });
 }
 
 //Ejecución
-
 loadHomeCarousel();
-initFormListener();
+
+// Form de contacto
+const form = document.getElementById("form_contactenos");
+if (form) initFormListener(form);
+
