@@ -8,7 +8,7 @@
     "test": "prueba",
     "get_data": "node getdata.js",
     "build": "node getdata.js && grunt build",
-    "dev": "grunt dev"
+    "dev": "node getdata && grunt dev"
   },
   "repository": {
     "type": "git",
