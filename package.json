@@ -8,7 +8,8 @@
     "test": "prueba",
     "get_data": "node getdata.js",
     "build": "node getdata.js && grunt build",
-    "dev": "node getdata && grunt dev"
+    "dev": "node getdata && grunt dev", 
+    "deploy": "sh ./deploy.sh"
   },
   "repository": {
     "type": "git",
