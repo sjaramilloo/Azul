@@ -55,8 +55,16 @@ function initFormListener(form) {
   });
 }
 
+function initSidenav() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+}
+
 //Ejecución
 loadHomeCarousel();
+initSidenav();
 
 // Form de contacto
 const form = document.getElementById("form_contactenos");
