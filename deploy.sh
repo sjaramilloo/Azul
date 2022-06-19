@@ -13,4 +13,4 @@ git commit -m 'deploy'
 # in this case, the gh-pages branch
 git push -f git@github.com:sjaramilloo/Azul.git master:gh-pages
 # Back to previous directory (the root of your repo)
-cd -
+cd ..
