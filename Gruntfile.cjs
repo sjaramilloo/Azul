@@ -48,6 +48,11 @@ module.exports = function (grunt) {
             cwd: 'src/js',
             src: '**',
             dest: 'dist/js',
+        },
+        cname: {
+          expand: true,
+          src: 'CNAME',
+          dest: 'dist/',
         }
       },
     watch: {
