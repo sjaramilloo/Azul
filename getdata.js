@@ -22,23 +22,18 @@ const db = getFirestore(app);
 * @param {Object} db recibe un objeto con una referencia a un fire store 
 * @returns retorna el contenido de la coleccion "profesionales" */
 
-async function getProfesionales(db){
-   // Buscar la coleccion profesionales en la base de datos que se recibio
+
+async function getCollection(db,collectionName){
+     // Buscar la coleccion profesionales en la base de datos que se recibio
    // y guardar la referencia (direccion) en la variable profesionalesCollection
-  const profesionalesCollection = collection(db, "profesionales");
-  // Extraer los registros de la coleccion referenciada en profesionales Collection
-  const profesionalesSnapshot = await getDocs(profesionalesCollection);
-  // organizar los registros almacenados de profesionalesSnapshot en 
+  const collectionReference = collection(db,collectionName);
+    // Extraer los registros de la coleccion referenciada en profesionales Collection
+  const collectionSnapshot = await getDocs(collectionReference);
+    // organizar los registros almacenados de profesionalesSnapshot en 
   // un array llamado profesionalesList
-  const profesionalesList = profesionalesSnapshot.docs.map(doc=>doc.data());
-  // retornanr el array re registros
-  return profesionalesList;
-}
-async function getProductos(db){
-  const productosCollection = collection(db, "productos");
-  const productosSnapshot = await getDocs(productosCollection);
-  const productosList = productosSnapshot.docs.map(doc=>doc.data());
-  return productosList
+  const collectionList = collectionSnapshot.docs.map(doc=>doc.data());
+    // retornanr el array re registros
+  return collectionList
 }
 
 // Declara un objeto contenidoCrudo
@@ -46,8 +41,9 @@ const contenidoCrudo = {
   // la llave prefesiones se llena con getProfesionales
   // pasamos db como referencia a nustro fire store
   // await para que espere a que el contenido sea "llamado" antes de seguir 
-  profesionales: await getProfesionales(db),
-  productos: await getProductos(db)
+  profesionales: await getCollection(db, "profesionales"),
+  productos: await getCollection(db, "productos"),
+  metadata:await getCollection(db, "metadata")
 };
   // tomar el JSON y aplanarlo en un string con cara de JSON para escribirlo fcil en un archivo
 const contenido = JSON.stringify(contenidoCrudo);

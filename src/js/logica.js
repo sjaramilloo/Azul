@@ -43,7 +43,7 @@ function loadHomeCarousel() {
     var instances = M.Carousel.init(elems, options);
   });
   window.addEventListener("resize", function () {
-    console.log("aja");
+
     var elems = document.querySelectorAll(".carousel");
     var instances = M.Carousel.init(elems, options);
   });
@@ -62,6 +62,20 @@ function initSidenav() {
   });
 }
 
+function equalizeCards(section){
+  const cards = section.querySelectorAll('.card')
+  let maxh = 0;
+  cards.forEach(card => {
+    if (card.clientHeight > maxh) {
+      maxh = card.clientHeight      
+    }
+  }); 
+  cards.forEach(card => {
+    card.style.minHeight =`${maxh}px`
+  });
+}
+
+
 //Ejecución
 loadHomeCarousel();
 initSidenav();
@@ -70,3 +84,8 @@ initSidenav();
 const form = document.getElementById("form_contactenos");
 if (form) initFormListener(form);
 
+const cardsProfesionales = document.getElementById("profesionales");
+if (cardsProfesionales) equalizeCards(cardsProfesionales);
+
+const cardsProductos = document.getElementById("productos");
+if (cardsProductos) equalizeCards(cardsProductos);
