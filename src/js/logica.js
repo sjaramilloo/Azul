@@ -71,7 +71,7 @@ function equalizeCards(section){
     }
   }); 
   cards.forEach(card => {
-    card.style.minHeight =`${maxh}px`
+    card.style.height =`${maxh}px`
   });
 }
 
