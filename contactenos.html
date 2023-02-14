@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Azul Contáctenos</title>
+  <link rel="shortcut icon" href="./images/logo_icon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <nav class="nav cyan darken-3">
+    <div class="nav-wrapper">
+      <a href="./index.html"><img class="brand-logo" alt="Logo Azul, casa holistica" src="./images/logo1.png" /></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down align">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./tienda.html">Tienda</a></li>
+        <li><a href="./contactenos.html">Contáctenos</a></li>
+        <!-- <li><a href="./contactenos.html">Agenda</a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="./index.html">Inicio</a></li>
+    <li><a href="./tienda.html">Tienda</a></li>
+    <li><a href="./contactenos.html">Contáctenos</a></li>
+    <!-- <li><a href="./contactenos.html">Agenda</a></li> -->
+  </ul>
+  <div class="container">
+    <div class=" section">
+      <h4 class="cyan-text text-darken-2">Contáctenos</h4>
+      <form class="" action="https://formspree.io/f/mpzbnqvg" id="form_contactenos" method="POST">
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="nombre" id="first_name" type="text" class="validate">
+            <label for="first_name">Nombre</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="mobile" id="phone" type="text" class="validate">
+            <label for="phone">Teléfono</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="email" id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="message" name="observacion" class="materialize-textarea"></textarea>
+            <label for="message">Mensaje</label>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Enviar" class="waves-effect waves-light btn cyan darken-3 contactenos__btn">
+          <span class="red-text text-darken-1 hidden" id="negative">Error al enviar el formulario</span>
+          <span class="green-text hidden" id="positive">Exito al enviar el formulario</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <footer class="page-footer cyan darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Espacios armoniosos para atención presencial en pro del equilibrio integral del ser.
+          </h5>
+          <a href="https://api.whatsapp.com/send?phone=573148770506" target="_blank">
+            <img src="https://img.icons8.com/color-glass/48/000000/whatsapp.png" alt="" aria-hidden="true" /></a>
+          <a href="https://www.facebook.com/azulbienestar-111429571452347/" target="_blank"><img
+              src="https://img.icons8.com/color-glass/50/000000/facebook-new.png" alt="" aria-hidden="true" /></a>
+          <a href="https://www.instagram.com/azul.bienestar/" target="_blank"><img
+              src="https://img.icons8.com/color-glass/50/000000/instagram-new.png" alt="" aria-hidden="true" /></a>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Información de interés</h5>
+
+          <div>
+            <p class="grey-text text-lighten-3">Lunes a Viernes de 8 AM a 8 PM </p>
+            <p class="grey-text text-lighten-3"> Sábados de 8 AM a 5 PM</p>
+            <p><a class="grey-text text-lighten-3"
+                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.669775799665!2d-75.58687688573431!3d6.174945328831423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4683623c5177cb%3A0x6e9cf8af8b32465b!2sAzul%20Casa%20Hol%C3%ADstica!5e0!3m2!1sen!2sco!4v1654372000287!5m2!1sen!2sco">Dg.
+                33 #32A Sur 34, Envigado, Antioquia</p>
+            <p><a class="grey-text text-lighten-3" href="azul.casaholistica@gmail.com">azul.casaholistica@gmail.com</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2022 Copyright
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/logica.js"></script>
+</body>
+
+</html>
