@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./css/style.css" />
   <title>Azul Casa Holística</title>
   <link rel="shortcut icon" href="./images/logo_icon.ico" type="image/x-icon">
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtGIFBmJzFIKVuM1amAq4KhZa3WjbPszM&callback=console.debug&libraries=maps,marker&v=beta">
+  </script>
 </head>
 
 <body>
@@ -121,10 +123,10 @@
             <p class="grey-text text-lighten-3">Lunes a Viernes de 8 AM a 8 PM </p>
             <p class="grey-text text-lighten-3"> Sábados de 8 AM a 5 PM</p>
             <p>
-              <a class="grey-text text-lighten-3" target="_blank"
-                href="https://www.google.com/maps?ll=6.17494,-75.584688&z=16&t=m&hl=en&gl=CO&mapclient=embed&cid=7970518873377228379">
-                Carrera 45 # 34 Sur 28, Envigado, Antioquia
-              </a>
+              <!DOCTYPE html>
+              <gmp-map center="6.173455715179443,-75.58831024169922" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="6.173455715179443,-75.58831024169922" title="My location"></gmp-advanced-marker>
+              </gmp-map>
             </p>
             <p>
               <a class="grey-text text-lighten-3" href="mailto:azul.casaholistica@gmail.com">
@@ -136,7 +138,7 @@
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">© 2022 Copyright</div>
+      <div class="container">© 2024 Copyright</div>
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
